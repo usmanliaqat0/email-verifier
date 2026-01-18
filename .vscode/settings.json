@@ -1,17 +1,26 @@
 {
-    "go.formatTool": "goimports",
-    "go.useLanguageServer": true,
-    "[go]": {
-        "editor.formatOnSave": true,
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": "always"
-        },
-        "editor.snippetSuggestions": "none"
+  "go.formatTool": "goimports",
+  "go.useLanguageServer": true,
+  "[go]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "always"
     },
-    "go.lintTool": "golangci-lint",
-    "go.lintOnSave": "package",
-    "go.lintFlags": [
-        "--fast",
-        "--config=${workspaceFolder}/.golangci.yml"
-    ]
-} 
+    "editor.snippetSuggestions": "none"
+  },
+  "go.lintTool": "golangci-lint",
+  "go.lintOnSave": "package",
+  "go.lintFlags": [
+    "--fast",
+    "--config=${workspaceFolder}/.golangci.yml"
+  ],
+  "task.allowAutomaticTasks": true,
+  "debug.openDebug": "neverOpen",
+  "terminal.integrated.inheritEnv": false,
+  "tasks": {
+    "label": "lint on open",
+    "type": "shell",
+    "command": "npm run lint",
+    "runOn": "folderOpen"
+  }
+}

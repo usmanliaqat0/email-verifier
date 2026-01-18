@@ -25,7 +25,6 @@ go.work
 go.work.sum
 
 # IDE specific files
-.vscode/*
 !.vscode/settings.json
 !.vscode/launch.json
 !.vscode/tasks.json
@@ -46,7 +45,6 @@ Thumbs.db
 # Application specific
 *.log
 *.env
-.env*
 !.env.example
 
 # Docker volumes and data
@@ -84,6 +82,6 @@ api.log*
 app.log*
 service.log* 
 
-.env
-.env.*
 .history/
+config.bat
+node_modules
